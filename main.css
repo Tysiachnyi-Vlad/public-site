@@ -1,0 +1,230 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f6f6f6;
+}
+*{
+    padding: 0;
+    marigin: 0;
+}
+li{
+    list-style: none;
+    disolay: flex;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    display: flex;
+}
+header{
+    background-color: #f6f6f6;
+    padding: 22px 0px 10px 0px;
+}
+.header-container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.header-container a{
+    color: black;
+    font-size: 16px;
+    padding: 26px 6px;margin-right: 63px;
+}
+.header-container a:hover{
+    background-color: #ffea00;
+}
+#menu-checkbox{
+    display: none;
+}
+nav{
+    margin-top: 20px;
+}
+.top-slide{
+    background: url("./img/slider_bg.png") no-repeat;
+    padding-top: 120px;
+    padding-bottom: 260px;
+}
+.top-slide h2{
+    background-color: #ffea00;
+    display: inline;
+    font-size: 70px;
+    padding: 0 13px;
+}
+.top-container :nth-child(2){
+    margin-bottom: 10px;
+}
+.top-slide p{
+    background-color: #414146;
+    color: white;
+    display: inline;
+    padding: 0px 7px;
+    font-size: 24px;
+}
+.top-container{
+    width: 85%;
+    margin: 0 auto;
+}
+.specialize-container{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.specialize-container h3{
+    font-size: 35px;
+}
+.specialize-container p{
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.top-card p{
+    font-size: 20px;
+}
+#first-p{
+    font-size: 20px;
+    color: white;
+    background-color: #414146;
+    padding: 24px 43px;
+}
+.bottom-card p{
+    font-size: 13px;
+    color: white;
+    background-color: #414146;
+    padding: 30px 40px;
+}
+
+.bottom-card{
+    position: relative;
+    top: -31px;
+}
+.top-card{
+    background-color: #ffea00;
+}
+.first-top-card{
+    padding: 0px;
+}
+.second-top-card{
+    padding: 33px 14px 13px 14px;
+}
+.third-top-card{
+    padding: 42px 14px 13px 14px;
+}
+.fourth-top-card{
+    padding: 20px 14px 13px 14px;
+}
+.specialize-cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.portfolio{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.portfolio h4{
+    display: inline;
+    background-color: #424147;
+    color: #ffea00;
+    padding: 8px 31px;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.portfolio p{
+    font-size: 16px;
+}
+.toggles button{
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px 5px;
+}
+.toggles button:after{
+    content: " / ";
+}
+.toggles button:last-child:after{
+    content: "";
+}
+.posts{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.posts img{
+    margin: 10px 2px;
+    height: 250px;
+}
+footer{
+    background-color: #414146;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+    font-size: 13px;
+    padding: 12px 120px;
+}
+.aboutUs{
+    width: 35%;
+    text-align: left;
+}
+footer h3{
+    font-size: 18px;
+}
+.contacts{
+    width: 25%;
+    text-align: left;
+}
+.contacts img{
+    display: inline;
+    float: left;
+    margin-right: 18px;
+}
+.contacts div{
+    margin: 31px 0px;
+}
+
+@media screen and (max-width: 420px){
+    .header-container{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    .main-menu{
+        display: none;
+    }
+    .main-menu li{
+        width: 100%;
+        display: block;
+        font-size: 12px;
+    }
+    .main-menu a{
+        display: block;
+        padding: 8px;
+    }
+    .toggle-button{
+        text-align: center;
+        display: block;
+        cursor: pointer;
+        color: black;
+    }
+    .toggle-button:after{
+        content: attr(data-open);
+        display: block;
+    }
+    #menu-checkbox:checked + nav[role="navigation"] .main-menu{
+        display: block;
+    }
+    #menu-checkbox:checked + nav[role="navigation"] .toggle-button:after{
+        content:attr(data-close);
+    }
+    .header-container a{
+        margin-right: -65px;
+    }
+    .main-menu{
+        position: relative;
+        top: 30px;
+        right: 90px;
+    }
+}
